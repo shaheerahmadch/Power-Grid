@@ -1,0 +1,48 @@
+.control-container{
+	border: none;
+}
+
+/* Table */
+.table {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Microsoft Fluent UI font */
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Table Header */
+.th {
+  border: 1px solid #eaeaea; /* Light gray border */
+  background-color: #f4f4f4; /* Light gray background */
+  color: #333; /* Dark gray text color */
+  text-align: left;
+  padding: 12px; /* Increased padding for better spacing */
+}
+
+/* Table Data */
+.td {
+  border: 1px solid #eaeaea; /* Light gray border */
+  padding: 10px; /* Increased padding for better spacing */
+}
+
+/* Row Hover Effect */
+.tr:hover {
+  background-color: #f9f9f9; /* Light gray background on hover */
+}
+
+/* Fluent UI Row Styles */
+.tr:nth-child(even) {
+  background-color: #f1f1f1; /* Alternate row background color */
+}
+
+.tr:first-child {
+  border-top: 2px solid #0078d4; /* Fluent UI primary color border for first row */
+}
+
+.tr:last-child {
+  border-bottom: 2px solid #0078d4; /* Fluent UI primary color border for last row */
+}
+
+.curser-pointer{
+  cursor: pointer;
+}
+ 
