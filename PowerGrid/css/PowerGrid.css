@@ -1,6 +1,6 @@
 .control-container {
   border: none;
-  overflow: auto;
+  overflow-x: auto;
 }
 
 /* Table */
@@ -8,6 +8,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Microsoft Fluent UI font */
   border-collapse: collapse;
   width: 100%;
+  table-layout: fixed;
 }
 
 /* Table Header */
