@@ -9,8 +9,9 @@ const skipedColumns = [
 	"importsequencenumber",
 	"overriddencreatedon",
 	"utcconversiontimezonecode",
-	"timezoneruleversionnumber"
+	"timezoneruleversionnumber",
 ];
+debugger
 export const getColumns = (object: Object, data: Array<any>) => {
 	if (object) {
 		const keys = Object.keys(object);
