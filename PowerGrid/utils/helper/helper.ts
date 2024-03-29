@@ -10,6 +10,9 @@ const skipedColumns = [
 	"overriddencreatedon",
 	"utcconversiontimezonecode",
 	"timezoneruleversionnumber",
+	"versionnumber",
+	"partitionid",
+	"ttlinseconds"
 ];
 debugger
 export const getColumns = (object: Object, data: Array<any>) => {

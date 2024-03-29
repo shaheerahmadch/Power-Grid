@@ -2,5 +2,6 @@ import { IInputs } from "../generated/ManifestTypes";
 
 export type Props = {
 	context: ComponentFramework.Context<IInputs>,
-	onClick: (row: string) => void
+	onClick: (row: string) => void,
+	isNewUpdate: string
 };

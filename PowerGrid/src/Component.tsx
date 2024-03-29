@@ -1,17 +1,19 @@
 import * as React from 'react'
-import { Props } from '../types/ComponentProps.s'
+import { Props } from '../types/ComponentProps'
 import { getColumns, getDispayName, getUniqueIdentifier } from '../utils/helper/helper';
 
-const Component = ({ context, onClick }: Props) => {
+const Component = ({ context, onClick, isNewUpdate }: Props) => {
 	const [columns, setColumns] = React.useState<Array<string>>([]);
 	const [data, setData] = React.useState<Array<object>>([]);
 	const [metaData, setmetaData] = React.useState<Array<object>>([]);
-
+	//debugger
 	React.useEffect(() => {
 		(async () => {
 			try {
-				// var myHeaders = new Headers();
-				// myHeaders.append("Content-Type", "application/json");
+				setColumns([...[]]);
+            	setData([...[]])
+            	setmetaData([...[]]);
+				//		debugger
 				const myHeaders = new Headers();
 				myHeaders.append("Content-Type", "application/json");
 				myHeaders.append("Cookie", "ARRAffinity=746146f9b8a568138e0f8e8d19178ca6868557dc4149a92ed430f901c8a2c233; ARRAffinitySameSite=746146f9b8a568138e0f8e8d19178ca6868557dc4149a92ed430f901c8a2c233");
@@ -52,7 +54,7 @@ const Component = ({ context, onClick }: Props) => {
 				console.error({ e })
 			}
 		})()
-	}, [])
+	}, [isNewUpdate])
 
 	return (
 		<>
@@ -72,7 +74,7 @@ const Component = ({ context, onClick }: Props) => {
 								() => {
 									const item = getUniqueIdentifier(metaData);
 									//@ts-ignore
-									onClick(d[item.LogicalName.toLowerCase()]);
+									onClick(d[item.SchemaName.toLowerCase()]);
 								}
 							}>
 								{

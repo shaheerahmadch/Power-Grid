@@ -3,7 +3,7 @@ type DataSet = ComponentFramework.PropertyTypes.DataSet;
 import * as ReactDOM from 'react-dom';
 import * as  React from 'react';
 import Components from "./src/Component";
-import { Props } from "./types/ComponentProps.s";
+import { Props } from "./types/ComponentProps";
 
 export class PowerGrid implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
@@ -30,7 +30,8 @@ export class PowerGrid implements ComponentFramework.StandardControl<IInputs, IO
             onClick: (item: string) => {
                 this._onClickItem = item as string;
                 this._notifyOutputChanged()
-            }
+            },
+            isNewUpdate: Math.random().toString()
         };
         ReactDOM.render(
             React.createElement(Components, appProps), this._container,
