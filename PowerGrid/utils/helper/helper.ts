@@ -20,7 +20,7 @@ export const getColumns = (object: Object, data: Array<any>) => {
 		keys.forEach(i => {
 			if (!skipedColumns.includes(i)) {
 				const displayName = data?.find(d => {
-					return d.SchemaName.toLowerCase() === i.toLowerCase();
+					return d.LogicalName.toLowerCase() === i.toLowerCase();
 				})
 				if (displayName) {
 					if (displayName.AttributeType !== "Memo") {

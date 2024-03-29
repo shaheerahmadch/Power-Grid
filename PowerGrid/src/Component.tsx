@@ -72,7 +72,7 @@ const Component = ({ context, onClick }: Props) => {
 								() => {
 									const item = getUniqueIdentifier(metaData);
 									//@ts-ignore
-									onClick(d[item.SchemaName.toLowerCase()]);
+									onClick(d[item.LogicalName.toLowerCase()]);
 								}
 							}>
 								{
